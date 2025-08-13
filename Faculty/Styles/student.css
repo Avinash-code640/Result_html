@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(to left,#1B1833,#FFDE4D)
+}
+.student-heading{
+    text-align: center;
+    align-items: center;
+    font-size: 40px;
+    color: aqua;
+}
+.student.img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #da0f0f;
+    border-radius: 12px;
+    box-shadow: 0px 12px 18px rgb(0,0,0.15);
+
+
+}
+.student-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 800px;
+    background-color: antiquewhite;
+    border: 2px solid #02b9d7;
+    border-radius: 16px;
+    box-shadow: 0px 12px 20px rgb(0,0,0.5);
+    margin-left: auto;
+    margin-right: auto;
+}

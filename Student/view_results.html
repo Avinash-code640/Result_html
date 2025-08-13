@@ -3,9 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Student Result Dashboard</title>
+    <!-- Optional: Link a modern font if you want to -->
+    <link href="results.css" rel="stylesheet">
+    
+    <!-- CSS styles are embedded here -->
+    <style>
+        /* Basic Reset and Font */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 2rem;
+            background: linear-gradient(to left, #1B1833, #FFDE4D);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        /* Container for the form */
+        .form-container {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+        
+        /* Style for form elements */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.5rem;
+        }
+        
+        td {
+            padding: 0.75rem 0;
+        }
+        
+        input[type="text"], select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            box-sizing: border-box;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        
+        input[type="text"]:focus, select:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+        }
+        
+        b {
+            display: inline-block;
+            min-width: 150px;
+            font-weight: 500;
+            color: #555;
+        }
+        
+        /* Submit button styling */
+        button {
+            width: 150px;
+            padding: 0.75rem;
+            border: none;
+            background-color: #3498db;
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+        
+        /* Table for results */
+        .results-container {
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 800px;
+        }
+        
+        .results-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .results-table th, .results-table td {
+            border: 1px solid #e0e0e0;
+            padding: 1rem;
+            text-align: left;
+        }
+        
+        .results-table th {
+            background-color: #34495e;
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .results-table td {
+            background-color: #fdfdfd;
+        }
+        
+        .results-table tr:nth-child(even) td {
+            background-color: #f9f9f9;
+        }
+        
+        .results-table tr:hover td {
+            background-color: #f1f1f1;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            .form-container, .results-container {
+                padding: 1rem;
+            }
+            b {
+                min-width: unset;
+                display: block;
+                margin-bottom: 0.5rem;
+            }
+            input[type="text"], select {
+                width: 95%;
+            }
+        }
+    </style>
 </head>
 <body>
+    <h1>Student Result Dashboard</h1>
     
+    <!-- This div wraps the input form and buttons -->
+    <div class="form-container">
+        <table>
+            <tr>
+                <td><b>Enter student ID: </b></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><b>Select Year: </b></td>
+                <td>
+                    <select id="Select Year">
+                        <option value="2024-25">2024-25</option>
+                        <option value="2025-26">2025-26</option>
+                        <option value="2026-27">2026-27</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><b>Select Course:</b></td>
+                <td>
+                    <select name="course" id="courses">
+                        <option value="">Frontend Development</option>
+                    <option value="2025-26">Database management system</option>
+                  <option value="2026-27">Artificial intelligence and Machine Learning</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <button>Submit</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <hr>
+    
+  
+    <div class="results-container">
+        <table class="results-table">
+            <thead>
+                <tr>
+                    <td><b>Name of student</b></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mothukuri Avinash</td>
+                </tr>
+        <tr>
+                    <td><b>Course Name</b></td>
+                    <td><b>Marks</b></td>
+                    <td><b>Grade</b></td>
+                    <td><b>Status</b></td>
+           </tr>
+                <tr>
+                    <td>Frontend Development</td>
+             <td>65</td>
+               <td>7.0</td>
+                    <td>Pass</td>
+                </tr>
+                <tr>
+                    <td>Database Management System</td>
+         <td>55</td>
+                    <td>6.0</td>
+    <td>Pass</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>

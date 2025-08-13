@@ -4,8 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="user_management.css">
 </head>
 <body>
-    
+<div class="container">
+<div class="heading-card"><h1 class="main-title">User Registration</h1></div> 
+<div class="card registration-card">
+<div class="form-row">
+ <div class="form-group">
+<label for="fullName">Full Name:</label>
+<input type="text" id="fullName" value="hari">
+</div>
+<div class="form-group">
+ <label for="email">Email:</label>
+<input type="email" id="email" required>
+
+</div>
+ <div class="form-group">
+ <label for="role">Role:</label>
+<select id="role">
+<option value="">--Select Role--</option>
+</select>
+</div>
+</div>
+    <button class="register-btn">Register</button>
+ </div>
+
+<div class="heading-card"><h1 class="main-title">User information</h1></div>
+<div class="card user-info-card">
+<table>
+<thead>
+<tr>
+<th>Full Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>hari</td>
+                        <td>hari@gmail.com</td>
+                        <td>student</td>
+                        <td>
+                            <button class="action-btn edit-btn">Edit</button>
+      <button class="action-btn delete-btn">Delete</button>
+   </td>
+ </tr>
+<tr>
+  <td>mani</td>
+   <td>mani@uni.in</td>
+  <td>student</td>
+ <td>
+<button class="action-btn edit-btn">Edit</button>
+ <button class="action-btn delete-btn">Delete</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+    </div>
 </body>
 </html>
