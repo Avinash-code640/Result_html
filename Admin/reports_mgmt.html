@@ -1,11 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Admin Reports</title>
+    <link rel="stylesheet" href="report.css">
 </head>
 <body>
+    <h1>Admin Reports Dashboard</h1>
+
+    <div class="container">
+        <h2>Filters</h2>
+        <form>
+            <p>Department: 
+                <select>
+                    <option value="">All Departments</option>
+                    <option>Computer Science</option>
+                    <option>Mathematics</option>
+                    <option>Physics</option>
+                </select>
+            </p>
+            
+            <p>Course: 
+                <select>
+                    <option value="">All Courses</option>
+                    <option>CS101 - Programming</option>
+                    <option>MATH201 - Calculus</option>
+                </select>
+            </p>
+            
+            <p>Academic Year: 
+                <select>
+                    <option value="">All Years</option>
+                    <option>2023-24</option>
+                    <option>2022-23</option>
+                </select>
+            </p>
+            
+            <p>Semester: 
+                <select>
+                    <option value="">All Semesters</option>
+                    <option>Fall</option>
+                    <option>Spring</option>
+                </select>
+            </p>
+            
+            <p>Grade Range: 
+                <select>
+                    <option value="">All Grades</option>
+                    <option>A-B</option>
+                    <option>C-D</option>
+                    <option>F</option>
+                </select>
+            </p>
+            
+            <button>Apply Filters</button>
+            <button type="reset">Reset</button>
+        </form>
+    </div>
+    <div>
+
+        <h2>Report Views</h2>
+        <div>
+            <button>Course-wise</button>
+            <button>Student-wise</button>
+            <button>Faculty-wise</button>
+        </div>
+ 
+        <div>
+            <h3>Course-wise Performance</h3>
+            <table border="1">
+                <tr>
+                    <th>Course</th>
+                    <th>Department</th>
+                    <th>Avg Score</th>
+                    <th>Pass %</th>
+                    <th>Grade Distribution</th>
+                </tr>
+                <tr>
+                    <td>CS101</td>
+                    <td>Computer Science</td>
+                    <td>78.2</td>
+                    <td>92%</td>
+                    <td>A:15 B:20 C:5</td>
+                </tr>
+                <tr style="background-color:#f0f0f0">
+                    <td colspan="2"><strong>Subtotal (CS Dept)</strong></td>
+                    <td>75.6</td>
+                    <td>90%</td>
+                    <td>A:25 B:30 C:10</td>
+                </tr>
+            </table>
+        </div>
     
+        <div style="display:none">
+            <h3>Student Performance</h3>
+            <table border="1">
+                <tr>
+                    <th>Student</th>
+                    <th>Program</th>
+                    <th>GPA</th>
+                    <th>Status</th>
+                    <th>Courses Taken</th>
+                </tr>
+                <tr>
+                    <td>John Doe</td>
+                    <td>BSc CS</td>
+                    <td>3.8</td>
+                    <td><span>Excellent</span></td>
+                    <td>5</td>
+                </tr>
+            </table>
+        </div>
+    
+        <div style="display:none">
+            <h3>Faculty Performance</h3>
+            <table border="1">
+                <tr>
+                    <th>Faculty</th>
+                    <th>Courses</th>
+                    <th>Avg Pass %</th>
+                    <th>Student Feedback</th>
+                </tr>
+                <tr>
+                    <td>Dr. Smith</td>
+                    <td>CS101, CS201</td>
+                    <td>89%</td>
+                    <td>4.2/5</td>
+                </tr>
+            </table>
+        </div>
+    </div>
 </body>
 </html>

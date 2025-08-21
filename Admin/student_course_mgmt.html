@@ -3,9 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Course Management</title>
+    <link rel="stylesheet" href="course.css">
 </head>
 <body>
-    
+    <div class="main-container">
+        <header>
+            <h1 class="page-title">Course Management</h1>
+        </header>
+
+        <div class="course-list-section">
+            <h2>Course List</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>CourseID</th>
+                        <th>Code</th>
+                        <th>Title</th>
+                        <th>Credits</th>
+                        <th>Department</th>
+                        <th>Semester</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Cse</td>
+                        <td>Introduction to Computer Science</td>
+                        <td>3</td>
+                        <td>Computer Science</td>
+                        <td>1</td>
+                        <td class="action-buttons">
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>MATH201</td>
+                        <td>Calculus II</td>
+                        <td>4</td>
+                        <td>Mathematics</td>
+                        <td>1</td>
+                        <td class="action-buttons">
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="form-container">
+            <h2>Add/Edit Course</h2>
+            <form>
+                <div class="form-group">
+                    <label for="code" class="required">Code</label>
+                    <input type="text" id="code" name="code" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="title" class="required">Title</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="credits" class="required">Credits</label>
+                    <input type="number" id="credits" name="credits" min="1" max="10" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="department" class="required">Department</label>
+                    <select id="department" name="department" required>
+                        <option value="">Select Department</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Mathematics">Mathematics</option>
+                        <option value="Physics">Physics</option>
+                        <option value="Biology">Biology</option>
+                        <option value="Chemistry">Chemistry</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="semester" class="required">Semester</label>
+                    <select id="semester" name="semester" required>
+                        <option value="">Select Semester</option>
+                        <option value="ODD">ODD</option>
+                        <option value="EVEN">EVEN</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="year" class="required">Year</label>
+                    <input type="number" id="year" name="year" min="2000" max="2100" required>
+                </div>
+                
+                <div class="button-group">
+                    <button type="submit" class="submit-btn">Save Course</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

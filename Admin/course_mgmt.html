@@ -4,8 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Course Management</title>
+    <link rel="stylesheet" href="course.css">
 </head>
 <body>
- <h1>Course Management</h1>   
+    <div class="main-container">
+        <h1 class="page-title">Course Management</h1>
+
+        <div class="input-form">
+            <label for="student-name"><b>Enter Student Name:</b></label>
+            <input type="text" id="student-name" placeholder="Student Name">
+
+            <label for="student-id"><b>Enter Student ID:</b></label>
+            <input type="text" id="student-id" placeholder="Student ID">
+        </div>
+
+        <div class="heading-card">
+            <h2 class="main-title">User Information</h2>
+        </div>
+        
+        <div class="card user-info-card">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Full Name</th>
+                        <th>Student ID</th>
+                        <th>Student Courses</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Avinash</td>
+                        <td>2400031572</td>
+                        <td>
+                            <ul>
+                                <li>Frontend Development</li>
+                                <li>Database Management System</li>
+                                <li>Artificial Intelligence and Machine Learning</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <button class="action-btn edit-btn">Edit</button>
+                            <button class="action-btn delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>abhinav</td>
+                        <td>2400031900</td>
+                        <td>
+                            <ul>
+                                <li>Frontend Development</li>
+                                <li>Database Management System</li>
+                                <li>Artificial Intelligence and Machine Learning</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <button class="action-btn edit-btn">Edit</button>
+                            <button class="action-btn delete-btn">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </body>
 </html>

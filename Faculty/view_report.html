@@ -1,11 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Faculty Reports</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="report.css">
 </head>
 <body>
-    
+    <div class="container">
+        <h1>Result Reports</h1>
+
+        <div class="filters-section">
+            <h2>Filters</h2>
+            <form>
+                <div class="filter-group">
+                    <p>Course:
+                        <select>
+                            <option value="">All Courses</option>
+                            <option>CS101 - Programming</option>
+                            <option>MATH201 - Calculus</option>
+                        </select>
+                    </p>
+                    <p>Academic Year:
+                        <select>
+                            <option value="">All Years</option>
+                            <option>2023-24</option>
+                            <option>2022-23</option>
+                        </select>
+                    </p>
+                    <p>Semester:
+                        <select>
+                            <option value="">All Semesters</option>
+                            <option>Fall</option>
+                            <option>Spring</option>
+                        </select>
+                    </p>
+                    <p>Grade:
+                        <select>
+                            <option value="">All Grades</option>
+                            <option>A</option>
+                            <option>B</option>
+                            <option>C</option>
+                            <option>D</option>
+                            <option>F</option>
+                        </select>
+                    </p>
+                </div>
+                <div class="button-group">
+                    <button type="submit" class="apply-btn">Apply Filters</button>
+                    <button type="reset" class="reset-btn">Reset</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="grade-distribution-section">
+            <h2>Grade Distribution</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Grade</th>
+                        <th>Count</th>
+                        <th>Percentage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>A</td><td>25</td><td>32%</td></tr>
+                    <tr><td>B</td><td>30</td><td>38%</td></tr>
+                    <tr><td>C</td><td>15</td><td>19%</td></tr>
+                    <tr><td>D</td><td>5</td><td>6%</td></tr>
+                    <tr><td>F</td><td>4</td><td>5%</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="performance-metrics-section">
+            <h2>Performance Metrics</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Average Score</th>
+                        <th>Pass Percentage</th>
+                        <th>Total Students</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>72.5</td>
+                        <td>95%</td>
+                        <td>79</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </body>
 </html>
